@@ -68,6 +68,21 @@ const CompanySection: React.FC<CompanySectionProps> = ({
     }
   };
 
+  const getRouteLink = () => {
+    switch (spirit) {
+      case "elephant":
+        return "/dashboard";
+      case "bee":
+        return "/marketplace";
+      case "leopard":
+        return "/livestock";
+      case "hawk":
+        return "/finance";
+      default:
+        return "/dashboard";
+    }
+  };
+
   return (
     <section
       id={id}
@@ -102,8 +117,10 @@ const CompanySection: React.FC<CompanySectionProps> = ({
             <p className={cn("text-lg mb-8", textColorClass)}>
               {description}
             </p>
-            <Button className={cn("flex items-center gap-2", buttonColorClass)}>
-              {callToAction} <ArrowRight size={16} />
+            <Button asChild className={cn("flex items-center gap-2", buttonColorClass)}>
+              <Link to={getRouteLink()}>
+                {callToAction} <ArrowRight size={16} />
+              </Link>
             </Button>
           </div>
         </div>

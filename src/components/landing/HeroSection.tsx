@@ -53,11 +53,15 @@ const HeroSection: React.FC<HeroSectionProps> = ({ loading }) => {
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center opacity-0 animate-fade-in"
              style={{animationDelay: "0.8s", animationFillMode: "forwards"}}>
-          <Button className="bg-earth-green text-white hover:bg-earth-green-700 text-lg px-8 py-6">
-            Explore the Ecosystem
+          <Button asChild className="bg-earth-green text-white hover:bg-earth-green-700 text-lg px-8 py-6">
+            <Link to="/dashboard">
+              Explore the Ecosystem
+            </Link>
           </Button>
-          <Button variant="outline" className="bg-sun-gold text-deep-clay-900 hover:bg-sun-gold-600 border-sun-gold text-lg px-8 py-6">
-            Join the Revolution
+          <Button asChild variant="outline" className="bg-sun-gold text-deep-clay-900 hover:bg-sun-gold-600 border-sun-gold text-lg px-8 py-6">
+            <Link to="/learning">
+              Join the Revolution
+            </Link>
           </Button>
         </div>
       </div>

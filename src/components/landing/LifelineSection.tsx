@@ -62,8 +62,10 @@ const LifelineSection = () => {
           </div>
         </div>
         
-        <Button className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-8 py-6">
-          Get the Lifeline
+        <Button asChild className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-8 py-6">
+          <Link to="/intelligence">
+            Get the Lifeline
+          </Link>
         </Button>
       </div>
     </section>
