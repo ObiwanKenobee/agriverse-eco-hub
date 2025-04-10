@@ -1,5 +1,5 @@
 
-import { AlertTriangle, ArrowRight, Cow } from "lucide-react";
+import { AlertTriangle, ArrowRight, Beef } from "lucide-react";
 
 interface LivestockAlert {
   id: string;
@@ -55,7 +55,7 @@ const LivestockAlertWidget = () => {
       <div className="dashboard-card-header">
         <h3 className="dashboard-card-title">Livestock Alerts</h3>
         <div className="flex items-center space-x-1 text-earth-green">
-          <Cow className="h-5 w-5" />
+          <Beef className="h-5 w-5" />
           <span className="text-sm">{mockAlerts.length}</span>
         </div>
       </div>
