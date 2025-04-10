@@ -10,6 +10,7 @@ import Livestock from "./pages/Livestock";
 import Finance from "./pages/Finance";
 import Marketplace from "./pages/Marketplace";
 import Learning from "./pages/Learning";
+import Landing from "./pages/Landing";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -21,7 +22,8 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
+          <Route path="/" element={<Landing />} />
+          <Route path="/dashboard" element={<Index />} />
           <Route path="/intelligence" element={<Intelligence />} />
           <Route path="/livestock" element={<Livestock />} />
           <Route path="/finance" element={<Finance />} />

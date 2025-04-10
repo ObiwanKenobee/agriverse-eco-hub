@@ -1,13 +1,14 @@
 
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { 
   Globe, 
   Menu, 
   X, 
   User, 
   Bell, 
-  ChevronDown 
+  ChevronDown,
+  Home
 } from "lucide-react";
 import {
   DropdownMenu,
@@ -27,6 +28,7 @@ const languages = [
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentLanguage, setCurrentLanguage] = useState(languages[0]);
+  const location = useLocation();
 
   return (
     <header className="bg-white shadow-sm border-b border-cloud-white-300 sticky top-0 z-50">
@@ -42,22 +44,26 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-6">
-          <Link to="/" className="nav-item active">
+          <Link to="/" className={`nav-item ${location.pathname === '/' ? 'active' : ''}`}>
+            <Home size={18} />
+            Home
+          </Link>
+          <Link to="/dashboard" className={`nav-item ${location.pathname === '/dashboard' ? 'active' : ''}`}>
             Dashboard
           </Link>
-          <Link to="/intelligence" className="nav-item">
+          <Link to="/intelligence" className={`nav-item ${location.pathname === '/intelligence' ? 'active' : ''}`}>
             Intelligence
           </Link>
-          <Link to="/livestock" className="nav-item">
+          <Link to="/livestock" className={`nav-item ${location.pathname === '/livestock' ? 'active' : ''}`}>
             Livestock
           </Link>
-          <Link to="/finance" className="nav-item">
+          <Link to="/finance" className={`nav-item ${location.pathname === '/finance' ? 'active' : ''}`}>
             Finance
           </Link>
-          <Link to="/marketplace" className="nav-item">
+          <Link to="/marketplace" className={`nav-item ${location.pathname === '/marketplace' ? 'active' : ''}`}>
             Marketplace
           </Link>
-          <Link to="/learning" className="nav-item">
+          <Link to="/learning" className={`nav-item ${location.pathname === '/learning' ? 'active' : ''}`}>
             Learning
           </Link>
         </nav>
@@ -109,22 +115,26 @@ const Header = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-white p-4 border-t border-cloud-white-300">
           <nav className="flex flex-col space-y-3">
-            <Link to="/" className="nav-item active">
+            <Link to="/" className={`nav-item ${location.pathname === '/' ? 'active' : ''}`}>
+              <Home size={18} />
+              Home
+            </Link>
+            <Link to="/dashboard" className={`nav-item ${location.pathname === '/dashboard' ? 'active' : ''}`}>
               Dashboard
             </Link>
-            <Link to="/intelligence" className="nav-item">
+            <Link to="/intelligence" className={`nav-item ${location.pathname === '/intelligence' ? 'active' : ''}`}>
               Intelligence
             </Link>
-            <Link to="/livestock" className="nav-item">
+            <Link to="/livestock" className={`nav-item ${location.pathname === '/livestock' ? 'active' : ''}`}>
               Livestock
             </Link>
-            <Link to="/finance" className="nav-item">
+            <Link to="/finance" className={`nav-item ${location.pathname === '/finance' ? 'active' : ''}`}>
               Finance
             </Link>
-            <Link to="/marketplace" className="nav-item">
+            <Link to="/marketplace" className={`nav-item ${location.pathname === '/marketplace' ? 'active' : ''}`}>
               Marketplace
             </Link>
-            <Link to="/learning" className="nav-item">
+            <Link to="/learning" className={`nav-item ${location.pathname === '/learning' ? 'active' : ''}`}>
               Learning
             </Link>
           </nav>
