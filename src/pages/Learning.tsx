@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import Header from "@/components/layout/Header";
 import { 
@@ -11,7 +10,8 @@ import {
   Clock, 
   Play, 
   Star, 
-  Filter 
+  Filter,
+  Check
 } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -163,7 +163,6 @@ const Learning = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   
   useEffect(() => {
-    // Simulate data loading
     const timer = setTimeout(() => {
       setLoading(false);
     }, 1000);
@@ -578,7 +577,7 @@ const Learning = () => {
                           <h3 className="font-bold">Successful Livestock Management</h3>
                           <div className="text-xs text-deep-clay-500">52:15</div>
                         </div>
-                        <div className="text-sm text-deep-clay-500 mb-2">AgriTalk with Farmers • Episode 43</div>
+                        <div className="text-sm text-deep-clay-500 mb-2">AgriTalk with Farmers �� Episode 43</div>
                         <p className="text-sm text-deep-clay-600 mb-3">Veteran farmer Joseph Maina shares his 30 years of experience in managing healthy and productive livestock.</p>
                         <div className="flex space-x-2">
                           <button className="flex items-center gap-1 px-3 py-1.5 bg-earth-green-600 hover:bg-earth-green-700 text-white text-sm rounded-md">
