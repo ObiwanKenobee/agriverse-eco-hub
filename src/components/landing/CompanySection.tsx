@@ -60,9 +60,9 @@ const CompanySection: React.FC<CompanySectionProps> = ({
       case "bee":
         return "https://images.unsplash.com/photo-1568526381923-caf3fd520382?q=80&w=1374&auto=format&fit=crop";
       case "leopard":
-        return "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?q=80&w=1471&auto=format&fit=crop";
+        return "https://images.unsplash.com/photo-1466721591366-2d5fba72006d?q=80&w=1500&auto=format&fit=crop";
       case "hawk":
-        return "https://images.unsplash.com/photo-1629385701020-973ac53fae53?q=80&w=1471&auto=format&fit=crop";
+        return "https://images.unsplash.com/photo-1487887235947-a955ef187fcc?q=80&w=1500&auto=format&fit=crop";
       default:
         return "";
     }
